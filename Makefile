@@ -3,6 +3,9 @@ COMPOSE = docker compose
 .PHONY: up down restart logs ps clean help
 
 up: ## Arranque normal
+	$(COMPOSE) up
+
+upd: ## Arranque en modo silencioso
 	$(COMPOSE) up -d
 
 down: ## Baja todos los servicios
