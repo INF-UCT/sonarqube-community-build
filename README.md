@@ -7,6 +7,8 @@ This repository provides a setup for running Sonarqube Community Edition using D
 - [Docker](https://www.docker.com/get-started) installed on your machine.
 - [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine (if not included with Docker).
 
+- This setup uses a Makefile for easier management of Docker Compose commands. Ensure you have `make` available in your environment. You can use `make help` to see available commands.
+
 ## Running services
 
 1. **Clone the Repository**:
@@ -25,14 +27,12 @@ This repository provides a setup for running Sonarqube Community Edition using D
 
 4. **Start the Services using Make**:
 
-   use make bootstrap if it's your first time running the setup
-
    ```bash
-    make bootstrap
+    make up # or make upd for detached mode
    ```
 
-   use make up to start the services if you have already run the bootstrap
+5. **Access Sonarqube**:
+   Open your web browser and navigate to `http://localhost:9000` (or the port you specified in the `.env` file).
 
-   ```bash
-    make up
-   ```
+6. **Set up administrator Account**:
+   Follow the on-screen instructions to set up your administrator account.
